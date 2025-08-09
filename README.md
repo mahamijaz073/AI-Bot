@@ -116,6 +116,52 @@ npm start
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:5000
 
+## 🚀 Deployment
+
+### Local Development
+1. Install dependencies: `npm install`
+2. Install client dependencies: `cd client && npm install`
+3. Start the development server: `npm run dev`
+4. Access the application at `http://localhost:3000`
+
+### Render Free Tier Deployment
+
+#### Backend Deployment:
+1. Go to [Render.com](https://render.com) and sign in
+2. Click "New +" → "Web Service"
+3. Connect your GitHub repository: `https://github.com/mahamijaz073/AI-Bot.git`
+4. Configure the service:
+   - **Name:** `ai-trading-bot-backend`
+   - **Environment:** `Node`
+   - **Build Command:** `npm install`
+   - **Start Command:** `npm start`
+   - **Instance Type:** `Free`
+5. Add Environment Variables:
+   - `NODE_ENV=production`
+   - `PORT=10000`
+   - `MONGODB_URI=your_mongodb_atlas_connection_string`
+   - `JWT_SECRET=your_jwt_secret_key`
+   - `LICENSE_ENCRYPTION_KEY=your_license_encryption_key`
+6. Deploy!
+
+#### Frontend Deployment:
+1. Click "New +" → "Static Site"
+2. Connect the same GitHub repository
+3. Configure the static site:
+   - **Name:** `ai-trading-bot-frontend`
+   - **Build Command:** `cd client && npm install && npm run build`
+   - **Publish Directory:** `client/build`
+4. Add Environment Variable:
+   - `REACT_APP_API_URL=https://your-backend-service-name.onrender.com`
+5. Deploy!
+
+**Note:** Replace `your-backend-service-name` with the actual name of your deployed backend service.
+
+### Production Deployment (Alternative)
+1. Build the client: `cd client && npm run build`
+2. Start the production server: `npm start`
+3. The server will run on the specified PORT environment variable
+
 ## 📖 Usage Guide
 
 ### Dashboard Overview
