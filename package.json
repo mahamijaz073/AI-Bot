@@ -1,0 +1,35 @@
+{
+  "name": "ai-trading-signal-bot",
+  "version": "1.0.0",
+  "description": "AI-based trading signal bot with multi-timeframe support and TradingView integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "axios": "^1.5.0",
+    "ws": "^8.13.0",
+    "node-cron": "^3.0.2",
+    "technicalindicators": "^3.1.0",
+    "ccxt": "^4.0.77"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "trading",
+    "signals",
+    "ai",
+    "cryptocurrency",
+    "technical-analysis"
+  ],
+  "author": "Trading Bot Developer",
+  "license": "MIT"
+}
